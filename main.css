@@ -1,12 +1,17 @@
 @media only screen and (min-width: 720px) {
 	article {
-		--frame-padding: 20px;
+		--frame-padding: 50px;
 		width: calc(100vw - (2*var(--frame-padding)));
 		height: calc(100vh - (2*var(--frame-padding)));
 	}
 	h1{
-		font-size: 36px;
+		font-size: 75px;
 	}
+	ul {
+		font-size: 20px;
+	}
+	li {
+		margin: 5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -18,11 +23,16 @@
 
 article { 
 	padding: var(--frame-padding);
-	background-color: #dfd1d1;
-	justify-content: space-between;
+	background-color: #ebebe8;
 }
 body {
 	margin: 0;
+}
+h1 {
+	color: #2b2b2b;
+}
+ul {
+	color: #2b2b2b;
 }
 
 .frame {
@@ -32,6 +42,8 @@ body {
 	height: calc(100% - (2*var(--frame-padding)));
 	width: calc(100% - (2*var(--frame-padding))); 
 
+	display: flex;
+  justify-content: right;
 
 	padding: calc(var(--g) + var(--t));
 	outline: var(--t) solid #2b2b2b;
