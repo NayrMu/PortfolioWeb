@@ -71,6 +71,7 @@ ul {
 	height: 60px;
 	margin-left: 70px;
 	margin-top: -35px;
+	border: none;
 }
 .carousel {
 	display: flex;
