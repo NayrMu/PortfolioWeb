@@ -1,20 +1,96 @@
-
 @media only screen and (min-width: 720px) {
-	nav {
-	  width: 100vw;
-		height: 5vh;
-	}
 	article {
-		width: 100vw;
-		height: 95vh;
+		--frame-padding: 50px;
+		width: calc(100vw - (2*var(--frame-padding)));
+		height: calc(100vh - (2*var(--frame-padding)));
+	}
+	h1{
+		font-size: 75px;
+	}
+	ul {
+		font-size: 25px;
+	}
+	li {
+		margin: 5px;
+	}
+	a {
+		color: #2b2b2b;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #a0a4bf;
+		cursor: pointer;
 }
 
-@media only screen and (min-width: 300px) {
-	nav {
-		width: 100vw;
-		height: 2vh;
-	}
+@media only screen and (max-width: 600px) {
 	article {
-		width: 100vw;
-		height: 98vh;
+		width: 100%;
+		height: 98%;
+	}
 }
+
+article { 
+	padding: var(--frame-padding);
+	background-color: #ebebe8;
+}
+body {
+	margin: 0;
+}
+h1 {
+	color: #2b2b2b;
+}
+ul {
+	color: #2b2b2b;
+}
+
+.frame {
+	--s: 70px;
+	--t: 3px;
+	--g: var(--frame-padding);
+	height: calc(100% - (2*var(--frame-padding)));
+	width: calc(100% - (2*var(--frame-padding))); 
+
+	display: flex;
+  justify-content: left;
+
+	padding: calc(var(--g) + var(--t));
+	outline: var(--t) solid #2b2b2b;
+	outline-offset: calc(-1*var(--t));
+	-webkit-mask:
+			conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
+			0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+			linear-gradient(#000 0 0) content-box;
+}
+
+.carousel-container {
+	position: fixed;
+	z-index: 999;
+
+	width: 1680px;
+	height: 60px;
+	margin-left: 70px;
+	margin-top: -35px;
+	border: none;
+}
+.carousel {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.carousel button {
+	font-size: 20px;
+	opacity: 0.6;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.carousel .current {
+	font-size: 35px;
+	opacity: 1;
+	cursor: default;
+}
+
+
