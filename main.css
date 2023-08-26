@@ -66,7 +66,6 @@ ul {
 .carousel-container {
 	position: fixed;
 	z-index: 999;
-	border: 2px solid red;
 
 	width: 1680px;
 	height: 60px;
