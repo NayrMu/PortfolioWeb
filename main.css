@@ -1,26 +1,26 @@
 @media only screen and (min-width: 720px) {
-	article {
+	:root {
 		--frame-padding: 50px;
-		width: calc(100vw - (2*var(--frame-padding)));
-		height: calc(100vh - (2*var(--frame-padding)));
+	}
+	article {
+		width: 100vw;
+		height: 100vh;
 	}
 	h1{
 		font-size: 75px;
 	}
-	ul {
-		font-size: 25px;
-	}
-	li {
-		margin: 5px;
-	}
+	
 	a {
+		font-size: 25px;
+		margin: 12px;
 		color: #2b2b2b;
 		text-decoration: none;
 	}
 
-	a:hover {
+	div a:hover {
 		color: #a0a4bf;
 		cursor: pointer;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -31,30 +31,35 @@
 }
 
 article { 
-	padding: var(--frame-padding);
 	background-color: #ebebe8;
+	margin: 0;
+	display: flex;
+	overflow: auto;
+	white-space: nowrap;
 }
 body {
 	margin: 0;
+	overflow: hidden;
 }
 h1 {
 	color: #2b2b2b;
 }
-ul {
-	color: #2b2b2b;
-}
+
 
 .frame {
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0);
+	pointer-events: none;
 	--s: 70px;
 	--t: 3px;
 	--g: var(--frame-padding);
-	height: calc(100% - (2*var(--frame-padding)));
-	width: calc(100% - (2*var(--frame-padding))); 
-
-	display: flex;
-  justify-content: left;
+	height: calc(100vh - (4 * var(--g)));
+	width: calc(100vw - (4 * var(--g)));
 
 	padding: calc(var(--g) + var(--t));
+	margin: calc(var(--g) + var(--t));
+ 
 	outline: var(--t) solid #2b2b2b;
 	outline-offset: calc(-1*var(--t));
 	-webkit-mask:
@@ -66,11 +71,12 @@ ul {
 .carousel-container {
 	position: fixed;
 	z-index: 999;
-
-	width: 1680px;
+  
+	display: flex;
+	justify-content: center;
+	width: 100vw;
 	height: 60px;
-	margin-left: 70px;
-	margin-top: -35px;
+	margin-top: calc(100vh - (2*var(--frame-padding)));;
 	border: none;
 }
 .carousel {
@@ -92,5 +98,35 @@ ul {
 	opacity: 1;
 	cursor: default;
 }
+
+.proj-container {
+	height: 100vh;
+	flex: 0 0 100vw;
+	min-width: 100%;
+	background-color: #456f3d;
+	cursor: grab;
+}
+.proj-container:active { 
+	cursor: grabbing;
+}
+
+#proj1 {
+	background-color: #2d323f;
+}
+#proj2 {
+	background-color: #dda2af;
+}
+#proj3 {
+	background-color: #2da2ef;
+}
+#proj4 {
+	background-color: #ada2af;
+}
+#proj5 {
+	background-color: #ee529f;
+}
+
+
+
 
 
