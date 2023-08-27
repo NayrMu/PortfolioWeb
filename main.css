@@ -1,26 +1,31 @@
 @media only screen and (min-width: 720px) {
-	article {
+	:root {
 		--frame-padding: 50px;
-		width: calc(100vw - (2*var(--frame-padding)));
-		height: calc(100vh - (2*var(--frame-padding)));
+		--text-color: #2f2f2f;
+		--text-hover-color: #a0a4bf;
+	}
+	article {
+		width: 100vw;
+		height: 100vh;
 	}
 	h1{
 		font-size: 75px;
 	}
-	ul {
-		font-size: 25px;
-	}
-	li {
-		margin: 5px;
-	}
+	
 	a {
-		color: #2b2b2b;
-		text-decoration: none;
+		font-size: 25px;
+		margin: 12px;
 	}
 
-	a:hover {
-		color: #a0a4bf;
+	div a:hover {
 		cursor: pointer;
+	}
+
+	p {
+		width: 100%;
+		font-size: 25px;
+		line-height: 40px;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -31,31 +36,47 @@
 }
 
 article { 
-	padding: var(--frame-padding);
 	background-color: #ebebe8;
+	margin: 0;
+	display: flex;
+	overflow: hidden;
+	white-space: nowrap;
 }
 body {
 	margin: 0;
+	overflow: hidden;
 }
 h1 {
-	color: #2b2b2b;
+	color: var(--text-color);
 }
-ul {
-	color: #2b2b2b;
+p {
+	color: var(--text-color);
+	white-space: normal;
+	width: calc(100% - (4*var(--frame-padding)));
+}
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--text-hover-color);
 }
 
 .frame {
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0);
+	pointer-events: none;
 	--s: 70px;
 	--t: 3px;
 	--g: var(--frame-padding);
-	height: calc(100% - (2*var(--frame-padding)));
-	width: calc(100% - (2*var(--frame-padding))); 
-
-	display: flex;
-  justify-content: left;
+	height: calc(100vh - (4 * var(--g)));
+	width: calc(100vw - (4 * var(--g)));
 
 	padding: calc(var(--g) + var(--t));
-	outline: var(--t) solid #2b2b2b;
+	margin: calc(var(--g) + var(--t));
+ 
+	outline: var(--t) solid var(--text-color);
 	outline-offset: calc(-1*var(--t));
 	-webkit-mask:
 			conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
@@ -66,11 +87,12 @@ ul {
 .carousel-container {
 	position: fixed;
 	z-index: 999;
-
-	width: 1680px;
+  
+	display: flex;
+	justify-content: center;
+	width: 100vw;
 	height: 60px;
-	margin-left: 70px;
-	margin-top: -35px;
+	margin-top: calc(100vh - (2*var(--frame-padding)));;
 	border: none;
 }
 .carousel {
@@ -93,4 +115,48 @@ ul {
 	cursor: default;
 }
 
+.proj-container {
+	height: 100vh;
+	flex: 0 0 100vw;
+	min-width: 100%;
+	cursor: grab;
+}
+.proj-container:active { 
+	cursor: grabbing;
+}
 
+#proj1 {
+	background-color: #ebebe8;
+}
+#proj2 {
+	background-color: #e1e1dc;
+}
+#proj3 {
+	background-color: #ebebe8;
+}
+#proj4 {
+	background-color: #e1e1dc;
+}
+#proj5 {
+	background-color: #ebebe8;
+}
+
+.resource-Button {
+	width: 10%;
+	height: 6%;
+	border: 3px solid var(--text-color);
+	margin: 3%;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.resource-Button:active {
+	border-color: var(--text-hover-color);
+	background-color: var(--text-hover-color);
+}
+.resource-Button:hover {
+	border-color: var(--text-hover-color);
+}
