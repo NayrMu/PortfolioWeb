@@ -34,7 +34,7 @@ article {
 	background-color: #ebebe8;
 	margin: 0;
 	display: flex;
-	overflow: auto;
+	overflow: hidden;
 	white-space: nowrap;
 }
 body {

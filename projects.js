@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const carousel = carouselContainer.querySelector(".carousel");
 	const buttons = carousel.querySelectorAll(".carousel button");
 	const scrollContainer = document.querySelector("article");
+	const projCons = scrollContainer.querySelectorAll(".proj-container");
 
 	buttons.forEach((button) => {
 	});
@@ -26,8 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				button.classList.remove("current");
 		  }
 		});
-			scrollContainer.scrollLeft = pageDic[index];
-			console.log(pageDic[index]);
+			scrollContainer.scrollTo({
+					left: pageDic[index],
+					behavior: "smooth"
+				});
 	}
 
 	buttons.forEach((button, i) => {
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		scrollContainer.classList.add("active");
 		startX = e.pageX - scrollContainer.offsetLeft;
 		scrollLeft = scrollContainer.scrollLeft;
+			
 	});
 
 	scrollContainer.addEventListener("mouseleave", (e) => {
@@ -54,6 +58,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	scrollContainer.addEventListener("mouseup", (e) => {
 		isDown = false;
 		scrollContainer.classList.remove("active");
+	  projCons.forEach((el, index) => {
+			if (isInViewPort(el)) {
+				scrollContainer.scrollTo({
+					left: pageDic[index],
+					behavior: "smooth"
+				});
+			}
+			console.log("made it"); 
+		});	
 	});
 
 	scrollContainer.addEventListener("mousemove", (e) => {
@@ -66,6 +79,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		scrollContainer.scrollLeft = scrollLeft - walk;
 	});
 
+	function isInViewPort(el) {
+		console.log("also");
+		const rect = el.getBoundingClientRect();
+		const isVisible = (rect.left <= window.innerWidth / 2) && (rect.right >= window.innerWidth / 2);
+		console.log(isVisible);
+		return isVisible;
+	}
+
+	
 });
 
 
