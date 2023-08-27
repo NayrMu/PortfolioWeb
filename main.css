@@ -1,26 +1,26 @@
 @media only screen and (min-width: 720px) {
-	article {
+	:root {
 		--frame-padding: 50px;
-		width: calc(100vw - (2*var(--frame-padding)));
-		height: calc(100vh - (2*var(--frame-padding)));
+	}
+	article {
+		width: calc(100vw - (2 * var(--frame-padding)));
+		height: calc(100vh - (2 * var(--frame-padding)));
 	}
 	h1{
 		font-size: 75px;
 	}
-	ul {
-		font-size: 25px;
-	}
-	li {
-		margin: 5px;
-	}
+	
 	a {
+		font-size: 25px;
+		margin: 12px;
 		color: #2b2b2b;
 		text-decoration: none;
 	}
 
-	a:hover {
+	div a:hover {
 		color: #a0a4bf;
 		cursor: pointer;
+	}
 }
 
 @media only screen and (max-width: 600px) {
@@ -33,6 +33,7 @@
 article { 
 	padding: var(--frame-padding);
 	background-color: #ebebe8;
+	margin: 0;
 }
 body {
 	margin: 0;
@@ -40,21 +41,22 @@ body {
 h1 {
 	color: #2b2b2b;
 }
-ul {
-	color: #2b2b2b;
-}
+
 
 .frame {
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0);
+	pointer-events: none;
 	--s: 70px;
 	--t: 3px;
 	--g: var(--frame-padding);
-	height: calc(100% - (2*var(--frame-padding)));
-	width: calc(100% - (2*var(--frame-padding))); 
-
-	display: flex;
-  justify-content: left;
+	height: calc(100vh - (4 * var(--g)));
+	width: calc(100vw - (4 * var(--g)));
 
 	padding: calc(var(--g) + var(--t));
+	margin: calc(var(--g) + var(--t));
+ 
 	outline: var(--t) solid #2b2b2b;
 	outline-offset: calc(-1*var(--t));
 	-webkit-mask:
