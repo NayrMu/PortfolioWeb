@@ -3,8 +3,8 @@
 		--frame-padding: 50px;
 	}
 	article {
-		width: calc(100vw - (2 * var(--frame-padding)));
-		height: calc(100vh - (2 * var(--frame-padding)));
+		width: 100vw;
+		height: 100vh;
 	}
 	h1{
 		font-size: 75px;
@@ -31,12 +31,15 @@
 }
 
 article { 
-	padding: var(--frame-padding);
 	background-color: #ebebe8;
 	margin: 0;
+	display: flex;
+	overflow: auto;
+	white-space: nowrap;
 }
 body {
 	margin: 0;
+	overflow: hidden;
 }
 h1 {
 	color: #2b2b2b;
@@ -68,11 +71,12 @@ h1 {
 .carousel-container {
 	position: fixed;
 	z-index: 999;
-
-	width: 1680px;
+  
+	display: flex;
+	justify-content: center;
+	width: 100vw;
 	height: 60px;
-	margin-left: 70px;
-	margin-top: -35px;
+	margin-top: calc(100vh - (2*var(--frame-padding)));;
 	border: none;
 }
 .carousel {
@@ -94,5 +98,35 @@ h1 {
 	opacity: 1;
 	cursor: default;
 }
+
+.proj-container {
+	height: 100vh;
+	flex: 0 0 100vw;
+	min-width: 100%;
+	background-color: #456f3d;
+	cursor: grab;
+}
+.proj-container:active { 
+	cursor: grabbing;
+}
+
+#proj1 {
+	background-color: #2d323f;
+}
+#proj2 {
+	background-color: #dda2af;
+}
+#proj3 {
+	background-color: #2da2ef;
+}
+#proj4 {
+	background-color: #ada2af;
+}
+#proj5 {
+	background-color: #ee529f;
+}
+
+
+
 
 
