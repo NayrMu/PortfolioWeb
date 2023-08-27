@@ -53,7 +53,6 @@ p {
 	color: var(--text-color);
 	white-space: normal;
 	width: calc(100% - (4*var(--frame-padding)));
-	text-align: center;
 }
 a {
 	color: var(--text-color);
@@ -77,7 +76,7 @@ a:hover {
 	padding: calc(var(--g) + var(--t));
 	margin: calc(var(--g) + var(--t));
  
-	outline: var(--t) solid #2b2b2b;
+	outline: var(--t) solid var(--text-color);
 	outline-offset: calc(-1*var(--t));
 	-webkit-mask:
 			conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
@@ -120,7 +119,6 @@ a:hover {
 	height: 100vh;
 	flex: 0 0 100vw;
 	min-width: 100%;
-	background-color: #456f3d;
 	cursor: grab;
 }
 .proj-container:active { 
@@ -143,7 +141,22 @@ a:hover {
 	background-color: #ebebe8;
 }
 
+.resource-Button {
+	width: 10%;
+	height: 6%;
+	border: 3px solid var(--text-color);
+	margin: 3%;
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
 
-
-
-
+.resource-Button:active {
+	border-color: var(--text-hover-color);
+	background-color: var(--text-hover-color);
+}
+.resource-Button:hover {
+	border-color: var(--text-hover-color);
+}
