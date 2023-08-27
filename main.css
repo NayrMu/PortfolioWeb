@@ -1,6 +1,8 @@
 @media only screen and (min-width: 720px) {
 	:root {
 		--frame-padding: 50px;
+		--text-color: #2f2f2f;
+		--text-hover-color: #a0a4bf;
 	}
 	article {
 		width: 100vw;
@@ -13,13 +15,16 @@
 	a {
 		font-size: 25px;
 		margin: 12px;
-		color: #2b2b2b;
-		text-decoration: none;
 	}
 
 	div a:hover {
-		color: #a0a4bf;
 		cursor: pointer;
+	}
+
+	p {
+		width: 100%;
+		font-size: 25px;
+		line-height: 40px;
 	}
 }
 
@@ -42,9 +47,21 @@ body {
 	overflow: hidden;
 }
 h1 {
-	color: #2b2b2b;
+	color: var(--text-color);
 }
-
+p {
+	color: var(--text-color);
+	white-space: normal;
+	width: calc(100% - (4*var(--frame-padding)));
+	text-align: center;
+}
+a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--text-hover-color);
+}
 
 .frame {
 	position: fixed;
@@ -111,19 +128,19 @@ h1 {
 }
 
 #proj1 {
-	background-color: #2d323f;
+	background-color: #ebebe8;
 }
 #proj2 {
-	background-color: #dda2af;
+	background-color: #e1e1dc;
 }
 #proj3 {
-	background-color: #2da2ef;
+	background-color: #ebebe8;
 }
 #proj4 {
-	background-color: #ada2af;
+	background-color: #e1e1dc;
 }
 #proj5 {
-	background-color: #ee529f;
+	background-color: #ebebe8;
 }
 
 
