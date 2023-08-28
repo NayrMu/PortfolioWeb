@@ -52,7 +52,8 @@ h1 {
 p {
 	color: var(--text-color);
 	white-space: normal;
-	width: calc(100% - (4*var(--frame-padding)));
+	width: 100%;
+	text-align: center;
 }
 a {
 	color: var(--text-color);
@@ -116,13 +117,23 @@ a:hover {
 }
 
 .proj-container {
+	overflow-y: scroll;
+	overflow-x: hidden;
 	height: 100vh;
 	flex: 0 0 100vw;
 	min-width: 100%;
 	cursor: grab;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
 }
 .proj-container:active { 
 	cursor: grabbing;
+}
+
+.proj-container h1 {
+	margin: 0.2em;
 }
 
 #proj1 {
@@ -159,4 +170,28 @@ a:hover {
 }
 .resource-Button:hover {
 	border-color: var(--text-hover-color);
+}
+
+.proj-Contents {
+	flex-shrink: 0;
+	margin-top: calc( 2* var(--frame-padding));
+	margin-bottom: calc( 2* var(--frame-padding)); 
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+
+
+	/*background-color: #bb8b8b;*/
+	width: calc(100% - (4 * var(--frame-padding)));
+	height: calc(100% - (4 * var(--frame-padding))); 
+}
+.documentation-Container {
+	flex-shrink: 0;
+	background-color: #e1e1dc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
 }
