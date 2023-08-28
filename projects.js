@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
 				button.classList.remove("current");
 		  }
 		});
-			scrollContainer.scrollTo({
-					left: pageDic[index],
-					behavior: "smooth"
-				});
+		scrollContainer.scrollTo({
+			left: pageDic[index],
+			behavior: "smooth"
+		});
 	}
 
 	buttons.forEach((button, i) => {
@@ -60,12 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		scrollContainer.classList.remove("active");
 	  projCons.forEach((el, index) => {
 			if (isInViewPort(el)) {
-				scrollContainer.scrollTo({
-					left: pageDic[index],
-					behavior: "smooth"
-				});
+				currentIndex = index;
+				changeNum(currentIndex);
 			}
-			console.log("made it"); 
 		});	
 	});
 
