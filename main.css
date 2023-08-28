@@ -28,6 +28,12 @@
 	}
 }
 
+@media only screen and (min-width: 1940px) {
+	:root {
+		--frame-padding: 90px;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	article {
 		width: 100%;
@@ -119,6 +125,7 @@ a:hover {
 .proj-container {
 	overflow-y: scroll;
 	overflow-x: hidden;
+	
 	height: 100vh;
 	flex: 0 0 100vw;
 	min-width: 100%;
@@ -127,6 +134,9 @@ a:hover {
 	justify-content: flex-start;
 	align-items: center;
 	flex-direction: column;
+}
+::-webkit-scrollbar {
+	width: 0px;
 }
 .proj-container:active { 
 	cursor: grabbing;
