@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		if (!isDown == true) {return;}
 		e.preventDefault();
 		const x = e.pageX - scrollContainer.offsetLeft;
-		const walk = (x - startX) * 1.1;
+		const walk = (x - startX) * 1.3;
 		scrollContainer.scrollLeft = scrollLeft - walk;
 	});
 
