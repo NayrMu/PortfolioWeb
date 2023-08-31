@@ -290,6 +290,13 @@ body {
 }
 
 .motion-btn {
+	padding-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 150%;
 	background: transparent;
 	border-radius: 0.65em;
 	border: none;
@@ -297,6 +304,7 @@ body {
 	height: 100%;
 }
 .motion-btn:hover {
+	justify-content: end;
 	cursor: pointer;
 	box-shadow: 0em 0.5em 0.45em -0.5em #3b3b3b;
 }

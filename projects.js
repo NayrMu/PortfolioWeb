@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 	const scrollContainer = document.querySelector(".page .frame .content .proj-page-row");
 	const projCons = scrollContainer.querySelectorAll(".proj-page-col");
+	const motionBtns = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn")
 	if (scrollContainer !== null) {
 		console.log("Yosh");
 	} else { console.log("ouuhhhh") }
@@ -38,6 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	scrollContainer.addEventListener("mouseleave", (e) => {
 		isDown = false;
 		scrollContainer.classList.remove("active");
+		projCons.forEach((el, index) => {
+			if (isInViewPort(el)) {
+				scrollContainer.scrollTo({
+					left: pageDic[index],
+					behavior: "smooth"
+				});
+			}
+		});
 	});
 
 
@@ -51,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function() {
 					behavior: "smooth"
 				});
 			}
-			console.log("made it mouseup"); 
 		});	
 	});
 
@@ -71,5 +79,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		return isVisible;
 	}
 
+	motionBtns.forEach((el) => {
+		el.addEventListener("click", (e) => {
+			let parent = e.currentTarget.parentElement.parentElement.parentElement;
+			parent.scrollTo ({
+				top: parent.clientHeight,
+				behavior: "smooth",
+			});
+		})
+	})
 
 });
