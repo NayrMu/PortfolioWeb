@@ -236,12 +236,14 @@ body {
 }
 
 .row {
-	width: 100%;
+	min-width: 100%;
 	display: flex;
 	flex-direction: row;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
+
+/* Begin Projects Page */
 
 .proj-container {
 	width: 100%;
@@ -249,9 +251,14 @@ body {
 
 	display: flex;
 	flex-direction: column;
-	justify-items: stretch;
+	align-items: center;
 }
-.proj-page {
+.proj-page-x {
+	height: 100%;
+	min-width: 100%;
+	overflow: scroll;
+}
+.proj-page-y {
 	width: 100%;
 	min-height: 100%;
 	overflow: scroll;
@@ -259,6 +266,8 @@ body {
 ::-webkit-scrollbar {
 	display: none;
 }
+
+/* End Projects Page */
 
 .p-lg {
 	color: #3b3b3b;
