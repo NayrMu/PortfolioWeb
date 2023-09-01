@@ -1,12 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", function() {
+
+	/* Begin Variable Initation */
 	const scrollContainer = document.querySelector(".page .frame .content .proj-page-row");
 	const projCons = scrollContainer.querySelectorAll(".proj-page-col");
-	const motionBtns = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn")
-	if (scrollContainer !== null) {
-		console.log("Yosh");
-	} else { console.log("ouuhhhh") }
-	
+	const motionBtnsDown = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn-down")
+	const motionBtnsUp = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn-up")
 
 	let currentIndex = 0;
 	let isDown = false;
@@ -18,10 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		"3": 3 * scrollContainer.clientWidth,
 		"4": 4 * scrollContainer.clientWidth
 	}
+	/* End Variable Initiation */
 
+	/* Begin Side-Sroll Funcs */
 	function changeNum(index) {
 			scrollContainer.scrollLeft = pageDic[index];
-			console.log(pageDic[index]);
 			scrollContainer.scrollTo({
 					left: pageDic[index],
 					behavior: "smooth"
@@ -72,14 +72,23 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 	function isInViewPort(el) {
-		console.log("also");
 		const rect = el.getBoundingClientRect();
 		const isVisible = (rect.left <= window.innerWidth / 2) && (rect.right >= window.innerWidth / 2);
-		console.log(isVisible);
 		return isVisible;
 	}
+	/* End Side-Scroll Funcs */
 
-	motionBtns.forEach((el) => {
+	/* Begin Button Funcs */
+	motionBtnsUp.forEach((el) => {
+		el.addEventListener("click", (e) => {
+			let parent = e.currentTarget.parentElement.parentElement.parentElement;
+			parent.scrollTo ({
+				top: 0,
+				behavior: "smooth",
+			});
+		})
+	})
+	motionBtnsDown.forEach((el) => {
 		el.addEventListener("click", (e) => {
 			let parent = e.currentTarget.parentElement.parentElement.parentElement;
 			parent.scrollTo ({
@@ -88,5 +97,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		})
 	})
+	/* End Button Funcs */
 
 });
