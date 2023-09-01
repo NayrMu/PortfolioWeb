@@ -39,7 +39,16 @@
 	}
 
 	.p-lg {
-		font-size: 15px;
+		font-size: 13px;
+	}
+	.p-sm {
+		font-size: 10px;
+	}
+	.motion-btn-up{
+		font-size: 110%;
+	}
+	.motion-btn-down{
+		font-size: 110%;
 	}
 }
 @media only screen and (min-width: 600px) {
@@ -57,7 +66,16 @@
 	}
 
 	.p-lg {
-		font-size: 15px;
+		font-size: 14px;
+	}
+	.p-sm {
+		font-size: 12px;
+	}
+	.motion-btn-up{
+		font-size: 120%;
+	}
+	.motion-btn-down{
+		font-size: 120%;
 	}
 }
 @media only screen and (min-width: 800px) {
@@ -72,7 +90,10 @@
 	}
 
 	.p-lg {
-		font-size: 17px;
+		font-size: 15px;
+	}
+	.p-sm {
+		font-size: 15px;
 	}
 }
 @media only screen and (min-width: 1000px) {
@@ -87,7 +108,10 @@
 	}
 
 	.p-lg {
-		font-size: 19px;
+		font-size: 20px;
+	}
+	.p-sm {
+		font-size: 17px;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -102,7 +126,16 @@
 	}
 
 	.p-lg {
-		font-size: 21px;
+		font-size: 22px;
+	}
+	.p-sm {
+		font-size: 19px;
+	}
+	.motion-btn-up{
+		font-size: 130%;
+	}
+	.motion-btn-down{
+		font-size: 130%;
 	}
 }
 @media only screen and (min-width: 1400px) {
@@ -117,7 +150,10 @@
 	}
 
 	.p-lg {
-		font-size: 22px;
+		font-size: 24px;
+	}
+	.p-sm {
+		font-size: 20px;
 	}
 }
 @media only screen and (min-width: 1600px) {
@@ -132,7 +168,16 @@
 	}
 
 	.p-lg {
-		font-size: 24px;
+		font-size: 25px;
+	}
+	.p-sm {
+		font-size: 22px;
+	}
+	.motion-btn-up{
+		font-size: 140%;
+	}
+	.motion-btn-down{
+		font-size: 140%;
 	}
 }
 @media only screen and (min-width: 1900px) {
@@ -146,7 +191,10 @@
 		font-size: 25px;
 	}
 	.p-lg {
-		font-size: 25px;
+		font-size: 27px;
+	}
+	.p-sm {
+		font-size: 23px;
 	}
 }
 @media only screen and (min-width: 2400px) {
@@ -160,11 +208,14 @@
 		font-size: 27px;
 	}
 	.p-lg {
-		font-size: 27px;
+		font-size: 29px;
+	}
+	.p-sm {
+		font-size: 25px;
 	}
 }
 	
-
+/* Being Framing */
 body {
 	margin: 0;
 	overflow: hidden;
@@ -186,7 +237,9 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+/* End Framing */
 
+/* Begin Navbar */
 .navbar {
 	width: 100%;
 	height: 10%;
@@ -206,7 +259,9 @@ body {
 .navlink:hover {
 	text-decoration: underline;
 }
+/* End Navbar */
 
+/* Begin Content Divs */
 .content {
 	overflow: hidden;
 	width: 100%;
@@ -216,18 +271,7 @@ body {
 	align-items: center;
 	justify-content: center;
 }
-.title {
-	font-family: sans-serif;
-	font-weight: lighter;
-	color: #3b3b3b;
-	margin: 0.15em;
-}
-.sub-title {
-	font-family: sans-serif;
-	font-weight: lighter;
-	color: #8b8b8b;
-	margin: 0.1em;
-}
+
 
 .footer {
 	width: 100%;
@@ -239,12 +283,26 @@ body {
 }
 
 .row {
-	min-width: 100%;
+	min-width: 80%;
 	display: flex;
 	flex-direction: row;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
+	margin-left: 5%;
+	margin-right: 5%;
 }
+.row-main {
+	min-width: 80%;
+	display: flex;
+	align-items: center;
+	flex-grow: 2;
+	flex-direction: row;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+/* End Content Divs
 
 /* Begin Projects Page */
 
@@ -281,30 +339,92 @@ body {
 
 /* End Projects Page */
 
+/* Begin Text */
 .p-lg {
+	width: 100%;
+	text-align: justify;
 	color: #3b3b3b;
 	font-family: sans-serif;
 	line-height: 2.5em;
-	padding-left: 4em;
-	padding-right: 4em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.p-sm {
+	width: 100%;
+	text-align: justify;
+	color: #3b3b3b;
+	font-family: sans-serif;
+	line-height: 1.5em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.title {
+	font-family: sans-serif;
+	font-weight: lighter;
+	color: #3b3b3b;
+	margin: 0.15em;
+}
+.sub-title {
+	font-family: sans-serif;
+	font-weight: lighter;
+	color: #8b8b8b;
+	margin: 0.1em;
 }
 
-.motion-btn {
-	padding-bottom: 1em;
+.inline-link {
+	color: #857190;
+	text-decoration: none;
+}
+
+mark {
+	color: #e8f0fd;
+	background-color: #857190;
+	padding: 0.1em;
+}
+/* End Text */
+
+/* Begin Buttons */
+.motion-btn-up {
+	padding-top: 1em;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	font-size: 150%;
 	background: transparent;
 	border-radius: 0.65em;
 	border: none;
 	width: 50%;
 	height: 100%;
 }
-.motion-btn:hover {
+.motion-btn-up:hover {
+	justify-content: start;
+	cursor: pointer;
+	box-shadow: 0em 0.5em 0.45em -0.5em #3b3b3b;
+}
+.motion-btn-down {
+	padding-bottom: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background: transparent;
+	border-radius: 0.65em;
+	border: none;
+	width: 50%;
+	height: 100%;
+}
+.motion-btn-down:hover {
 	justify-content: end;
 	cursor: pointer;
 	box-shadow: 0em 0.5em 0.45em -0.5em #3b3b3b;
+}
+/* End Buttons */
+
+/* Begin Images */
+.img-sm {
+	align-self: center;
+	width: 50%;
+	height: auto;
 }
