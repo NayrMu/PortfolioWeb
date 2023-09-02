@@ -2,32 +2,51 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">		
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="mainminified.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+		<script src="https://kit.fontawesome.com/1f310bb7f4.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="javascriptminified.js"></script>
+		<script type="text/javascript">
+			if (darkModePreference === "disabled" && darkModePreference !== null) {
+			
+			r.style.setProperty("--color-bg", "#f1f1ef")
+			r.style.setProperty("--color-primary", "#3b3b3b");
+			r.style.setProperty("--color-secondary", "#8b8b8b");
+
+
+		} else {
+			r.style.setProperty("--color-bg", "#3b3b3b")
+			r.style.setProperty("--color-primary", "#dadad9");
+			r.style.setProperty("--color-secondary", "#bbbbbb");
+
+		}
+		</script>
 	</head>
 	<body>
 		<div class="page">
-			<div class="ext-row">
-				<p class="p-lg">Color Mode</p>
+			<div class="ext-row-top lg-d-none">
+				<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
+			</div>
+			<div class="ext-row-left sm-d-none">
+				<button class="color-mode-btn"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
 			</div>
 			<div class="frame">
 				<nav class="navbar">
 					<a class="navlink sm-d-none" href="index.html">Home</a>
 					<a class="navlink sm-d-none" href="projects.html">Projects</a>
 					<a class="navlink sm-d-none" href="aboutme.html">About Me</a>
-					<a class="navlink lg-d-none" href="index.html">H I</a>
-					<a class="navlink lg-d-none" href="projects.html">P I</a>
-					<a class="navlink lg-d-none" href="aboutme.html">A M I</a>
+					<a class="navlink lg-d-none" href="index.html"><i class="fa-solid fa-house"></i></a>
+					<a class="navlink lg-d-none" href="projects.html"><i class="fa-regular fa-lightbulb"></i></a>
+					<a class="navlink lg-d-none" href="aboutme.html"><i class="fa-regular fa-user"></i></a>
 				</nav>
 				<section class="content">
 					<span class="title">Ryan Muncy</span>
 					<span class="sub-title">Software Developer</span>
 				</section>
 				<footer class="footer">
-					<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="bi-linkedin" style="font-size: 50px;"></i></a>
+					<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
 					<a class="navlink" href="#">Resume</a>
-					<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="bi-github" style="font-size: 50px;"></i></a>
+					<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
 				</footer>
 			</div>
 		</div>

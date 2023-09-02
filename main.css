@@ -1,9 +1,9 @@
 @media only screen and (orientation: portrait) {
 	:root {
-		--margin-y: 50%;
-		--margin-x: 8%;
-		--exterior-margin-x: 8vw;
-		--exterior-margin-y: 50vw;
+		--margin-y: 40%;
+		--margin-x: 10%;
+		--exterior-margin-x: 10vw;
+		--exterior-margin-y: 40vw;
 	}
 	.frame {
 		margin-top: calc(var(--margin-y) / 2);
@@ -15,10 +15,10 @@
 }
 @media only screen and (orientation: landscape) {
 	:root {
-		--margin-y: 5%;
-		--margin-x: 22%;
-		--exterior-margin-y: 5vw;
-		--exterior-margin-x: 22vw;
+		--margin-y: 4%;
+		--margin-x: 20%;
+		--exterior-margin-y: 4vw;
+		--exterior-margin-x: 20vw;
 	}
 	.frame {
 		margin-top: calc(var(--margin-y) / 2);
@@ -39,7 +39,7 @@
 		font-size: 12px;
 	}
 	.sm-d-none {
-		display: none;
+		display: none!important;
 	}
 
 	.p-lg {
@@ -66,7 +66,7 @@
 		font-size: 24px;
 	}
 	.lg-d-none {
-		display: none;
+		display: none!important;
 	}
 	.navlink {
 		font-size: 15px;
@@ -268,23 +268,20 @@
 }
 	
 :root {
-	--dark-bg:;
-	--light-bg:#f1f1ef;
-	--dark-primary:;
-	--light-primary:#3b3b3b;
-	--dark-secondary: ;
-	--light-secondary: #8b8b8b;
-	--dark-accent:;
-	--ligh-accent: #906ca3;
+	--color-bg: ;
+	--color-primary: ;
+	--color-secondary: ;
+	--color-accent: #906ca3;
 }
 
 /* Begin Framing */
 body {
 	margin: 0;
 	overflow: hidden;
+	display: block!important;
 }
 .page {
-	background-color: var(--light-bg);
+	background-color: var(--color-bg);
 	overflow: hidden;
 	display: flex;
 	height: 100vh;
@@ -296,7 +293,7 @@ body {
 	flex-grow: 1;
 	border-width: 4px;
 	border-style: solid;
-	border-image: linear-gradient(to bottom, var(--light-primary) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, var(--light-primary) 90% ) 3;
+	border-image: linear-gradient(to bottom, var(--color-primary) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, var(--color-primary) 90% ) 3;
 
 	display: flex;
 	flex-direction: column;
@@ -313,7 +310,7 @@ body {
 }
 .navlink {
 	text-decoration: none;
-	color: var(--ligh-accent);
+	color: var(--color-accent);
 	padding-top: 0.75em;
 	padding-bottom: 0.75em;
 	padding-left: 1em;
@@ -371,12 +368,23 @@ body {
 	margin-right: 5%;
 }
 
-.ext-row {
+.ext-row-left {
 	position: fixed;
 
 	display: flex;
-	align-items: end;
-	justify-content: space-between;
+	align-items: start;
+	justify-content: end;
+
+	margin-top: calc(var(--exterior-margin-y) / 2);
+	margin-bottom: calc(var(--exterior-margin-y) / 2);
+	height: calc(100vh - var(--exterior-margin-y));
+	width: calc((var(--exterior-margin-x) / 2) - 3px);
+}
+.ext-row-top {
+	position: fixed;
+
+	display: flex;
+	align-items: end; 
 
 	margin-left: calc(var(--exterior-margin-x) / 2);
 	margin-right: calc(var(--exterior-margin-x) / 2);
@@ -427,7 +435,7 @@ a {
 .p-lg {
 	width: 100%;
 	text-align: justify;
-	color: var(--light-primary);
+	color: var(--color-primary);
 	font-family: sans-serif;
 	line-height: 2.5em;
 	padding-left: 1em;
@@ -436,7 +444,7 @@ a {
 .p-sm {
 	width: 100%;
 	text-align: justify;
-	color: var(--light-primary);
+	color: var(--color-primary);
 	font-family: sans-serif;
 	line-height: 1.5em;
 	padding-left: 1em;
@@ -444,30 +452,30 @@ a {
 }
 .title {
 	font-family: sans-serif;
-	font-weight: lighter;
-	color: var(--light-primary);
+	font-weight: colorer;
+	color: var(--color-primary);
 	margin: 0.15em;
 }
 .sub-title {
 	font-family: sans-serif;
-	font-weight: lighter;
-	color: var(--light-secondary);
+	font-weight: colorer;
+	color: var(--color-secondary);
 	margin: 0.1em;
 }
 
 .inline-link {
-	color: var(--ligh-accent);
+	color: var(--color-accent);
 	text-decoration: none;
 }
 
 mark {
-	color: var(--light-bg);
-	background-color: var(--ligh-accent);
+	color: var(--color-bg);
+	background-color: var(--color-accent);
 	padding: 0.1em;
 }
 
 .tech-text {
-	color: var(--ligh-accent);
+	color: var(--color-accent);
 	font-weight: bold;
 	padding-left: 0.5em;
 	margin: 0;
@@ -491,7 +499,7 @@ mark {
 .motion-btn-up:hover {
 	justify-content: end;
 	cursor: pointer;
-	box-shadow: 0em 0.5em 0.45em -0.5em var(--light-primary);
+	box-shadow: 0em 0.5em 0.45em -0.5em var(--color-primary);
 }
 .motion-btn-down {
 	padding-bottom: 1em;
@@ -509,12 +517,17 @@ mark {
 .motion-btn-down:hover {
 	justify-content: start;
 	cursor: pointer;
-	box-shadow: 0em 0.5em 0.45em -0.5em var(--light-primary);
+	box-shadow: 0em 0.5em 0.45em -0.5em var(--color-primary);
 }
 
 .color-mode-btn {
 	position: relative;
 	margin: 0.25em;
+	border: none;
+	background-color: transparent;
+}
+.color-mode-btn:hover {
+	cursor: pointer;
 }
 /* End Buttons */
 
@@ -526,7 +539,7 @@ mark {
 }
 
 i {
-	color: var(--ligh-accent);
+	color: var(--color-accent);
 }
 .row i {
 	padding-left: 0.3em;
