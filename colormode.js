@@ -25,20 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	let darkModePreference = getD();
-	
-	if (darkModePreference === "disabled" && darkModePreference !== null) {
-			
-			r.style.setProperty("--color-bg", "#f1f1ef")
-			r.style.setProperty("--color-primary", "#3b3b3b");
-			r.style.setProperty("--color-secondary", "#8b8b8b");
 
-
-		} else {
-			r.style.setProperty("--color-bg", "#3b3b3b")
-			r.style.setProperty("--color-primary", "#dadad9");
-			r.style.setProperty("--color-secondary", "#bbbbbb");
-
-		}
 
 	
 
@@ -60,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	
 	/* Begin Variable Initation */
-	const scrollContainer = document.querySelector(".page .frame .content .proj-page-row");
+	const scrollContainer = document.querySelector(".frame .content .proj-page-row");
 	const projCons = scrollContainer.querySelectorAll(".proj-page-col");
 	const motionBtnsDown = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn-down")
 	const motionBtnsUp = scrollContainer.querySelectorAll(".proj-page-col .proj-content .motion-btn-up")
