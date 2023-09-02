@@ -26,6 +26,17 @@
 		</script>
 	</head>
 	<body>
+		<svg id="fader"></svg>
+		<script type="text/javascript">
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+
+				var fader = document.getElementById("fader");
+				fader.classList.add("fade-out");
+			}
+
+			fadeInPage();
+		</script>
 		<div class="ext-row-top lg-d-none">
 			<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
 		</div>
@@ -165,6 +176,7 @@
 				<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
 				<a class="navlink" href="#">Resume</a>
 				<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
+			</footer>
 		</div>
 	</body>
 	<script src="https://kit.fontawesome.com/1f310bb7f4.js" crossorigin="anonymous"></script>

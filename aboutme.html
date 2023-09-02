@@ -26,6 +26,17 @@
 		</script>
 	</head>
 	<body>
+		<svg id="fader"></svg>
+		<script type="text/javascript">
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+
+				var fader = document.getElementById("fader");
+				fader.classList.add("fade-out");
+			}
+
+			fadeInPage();
+		</script>
 		<!-- TODO: Add an exterior colmn; landscape button goes on left side portrait button goes on top -->
 		<div class="ext-row-top lg-d-none">
 			<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
