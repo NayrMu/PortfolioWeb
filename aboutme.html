@@ -7,57 +7,59 @@
 		<script src="https://kit.fontawesome.com/1f310bb7f4.js" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="javascriptminified.js"></script>
 		<script type="text/javascript">
-			if (darkModePreference === "disabled" && darkModePreference !== null) {
-			
-			r.style.setProperty("--color-bg", "#f1f1ef")
-			r.style.setProperty("--color-primary", "#3b3b3b");
-			r.style.setProperty("--color-secondary", "#8b8b8b");
+			const r = document.querySelector(":root");
+			if (r !== null) {
+				console.log("Yosh")
+			} else {console.log("aouhhh")}
+			let darkModePreference = localStorage.getItem('darkMode');
+			if (darkModePreference === "disabled" | darkModePreference === null) {
+				
+					r.style.setProperty("--color-bg", "#f1f1ef");
+					r.style.setProperty("--color-primary", "#3b3b3b");
+					r.style.setProperty("--color-secondary", "#8b8b8b");
 
 
-		} else {
-			r.style.setProperty("--color-bg", "#3b3b3b")
-			r.style.setProperty("--color-primary", "#dadad9");
-			r.style.setProperty("--color-secondary", "#bbbbbb");
+				} else {
+					r.style.setProperty("--color-bg", "#3b3b3b");
+					r.style.setProperty("--color-primary", "#dadad9");
+					r.style.setProperty("--color-secondary", "#bbbbbb");
 
-		}
+				}
 		</script>
 	</head>
 	<body>
-		<div class="page">
-
-			<!-- TODO: Add an exterior colmn; landscape button goes on left side portrait button goes on top -->
-			<div class="ext-row-top lg-d-none">
-				<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
-			</div>
-			<div class="ext-row-left sm-d-none">
-				<button class="color-mode-btn"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
-			</div>
-			<div class="frame">
-				<nav class="navbar">
-					<a class="navlink sm-d-none" href="index.html">Home</a>
-					<a class="navlink sm-d-none" href="projects.html">Projects</a>
-					<a class="navlink sm-d-none" href="aboutme.html">About Me</a>
-					<a class="navlink lg-d-none" href="index.html"><i class="fa-solid fa-house"></i></a>
-					<a class="navlink lg-d-none" href="projects.html"><i class="fa-regular fa-lightbulb"></i></a>
-					<a class="navlink lg-d-none" href="aboutme.html"><i class="fa-regular fa-user"></i></a>
-				</nav>
-				</nav>
-				<section class="content">
-					<div class="row" style="justify-content: center;">
-						<span class="sub-title">Software Developer</span>
-					</div>
-					<div class="row">
-						<p class="p-lg">
-							This is some information about me. Hopefully these words end up being automatically justified to fit the edge.
-						</p>
-					</div>
-				</section>
-				<footer class="footer">
-					<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
-					<a class="navlink" href="#">Resume</a>
-					<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
-				</footer>
-			</div>
+		<!-- TODO: Add an exterior colmn; landscape button goes on left side portrait button goes on top -->
+		<div class="ext-row-top lg-d-none">
+			<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
+		</div>
+		<div class="ext-row-left sm-d-none">
+			<button class="color-mode-btn"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
+		</div>
+		<div class="frame">
+			<nav class="navbar">
+				<a class="navlink sm-d-none" href="index.html">Home</a>
+				<a class="navlink sm-d-none" href="projects.html">Projects</a>
+				<a class="navlink sm-d-none" href="aboutme.html">About Me</a>
+				<a class="navlink lg-d-none" href="index.html"><i class="fa-solid fa-house"></i></a>
+				<a class="navlink lg-d-none" href="projects.html"><i class="fa-regular fa-lightbulb"></i></a>
+				<a class="navlink lg-d-none" href="aboutme.html"><i class="fa-regular fa-user"></i></a>
+			</nav>
+			</nav>
+			<section class="content">
+				<div class="row" style="justify-content: center;">
+					<span class="sub-title">Software Developer</span>
+				</div>
+				<div class="row">
+					<p class="p-lg">
+						This is some information about me. Hopefully these words end up being automatically justified to fit the edge.
+					</p>
+				</div>
+			</section>
+			<footer class="footer">
+				<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
+				<a class="navlink" href="#">Resume</a>
+				<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
+			</footer>
 		</div>
 	</body>
 </html>
