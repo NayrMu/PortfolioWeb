@@ -40,6 +40,7 @@ window.addEventListener('pageshow', function (event) {
 		r.style.setProperty("--color-bg", "#3b3b3b");
 		r.style.setProperty("--color-primary", "#dadad9");
 		r.style.setProperty("--color-secondary", "#bbbbbb");
+
 	}
 
 	function disableD() {
@@ -48,6 +49,7 @@ window.addEventListener('pageshow', function (event) {
 		r.style.setProperty("--color-bg", "#f1f1ef");
 		r.style.setProperty("--color-primary", "#3b3b3b");
 		r.style.setProperty("--color-secondary", "#8b8b8b");
+		
 	}
 
 	function getD() {
