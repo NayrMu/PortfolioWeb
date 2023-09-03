@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
+	var anchors = document.getElementsByTagName("a");
+	for (var idx=0; idx<anchors.length; idx+=1) {
+		if (anchors[idx].hostname !== window.location.hostname ||
+			  anchors[idx].pathname === window.location.pathname) {
+			
+			continue;
+		}
+		anchors[idx].addEventListener('click', function(event) {
+      var fader = document.getElementById('fader'),
+          anchor = event.currentTarget;
+      
+      var listener = function() {
+          window.location = anchor.href;
+          fader.removeEventListener('animationend', listener);
+      };
+      fader.addEventListener('animationend', listener);
+      
+      event.preventDefault();
+
+	    fader.classList.add('fade-in');
+     });
+	}
+
+window.addEventListener('pageshow', function (event) {
+  if (!event.persisted) {
+    return;
+  }
+  var fader = document.getElementById('fader');
+  fader.classList.remove('fade-in');
+});
+
 	const buttons = document.querySelectorAll(".color-mode-btn");
 	const r = document.querySelector(":root");
 
@@ -9,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		r.style.setProperty("--color-bg", "#3b3b3b");
 		r.style.setProperty("--color-primary", "#dadad9");
 		r.style.setProperty("--color-secondary", "#bbbbbb");
+
 	}
 
 	function disableD() {
@@ -17,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		r.style.setProperty("--color-bg", "#f1f1ef");
 		r.style.setProperty("--color-primary", "#3b3b3b");
 		r.style.setProperty("--color-secondary", "#8b8b8b");
+		
 	}
 
 	function getD() {
@@ -143,7 +176,5 @@ document.addEventListener("DOMContentLoaded", function() {
 		})
 	})
 	/* End Button Funcs */
-
-
 
 })

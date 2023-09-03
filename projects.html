@@ -26,6 +26,17 @@
 		</script>
 	</head>
 	<body>
+		<svg id="fader"></svg>
+		<script type="text/javascript">
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+
+				var fader = document.getElementById("fader");
+				fader.classList.add("fade-out");
+			}
+
+			fadeInPage();
+		</script>
 		<div class="ext-row-top lg-d-none">
 			<button class="color-mode-btn" onclick="colorSwitch"><i class="fa-regular fa-moon" style="font-size: 2vh"></i></button>
 		</div>
@@ -65,8 +76,9 @@
 
 							<!-- Explaination -->
 							<div class="row-main" style="text-align: center;">
-								<p class="p-lg sm-d-none">I've developed a Command-Line Interface (CLI) File Management 
-									System using C# and the .NET framework. This project offers essential file management 
+								<p class="p-lg sm-d-none">This CLI project is designed for educational purposes,
+								  intended to facilitate learning and understanding of programming concepts. It 
+								  is devloped using C# and the .NET framework. This project offers essential file management 
 									features, providing users with a seamless copying, directory viewing, and navigation 
 									through directories. This project exemplifies my dedication to building practical 
 									solutions that enhance everyday tasks through technology.
@@ -88,7 +100,7 @@
 						</div>
 
 						<!-- Documentation -->
-						<div class="proj-content">
+						<div class="proj-content" style="min-height: 100%;">
 
 							<!-- Up Button -->
 							<div class="row"  style="justify-content: center; height: 10%;">
@@ -97,10 +109,10 @@
 							<div class="row">
 								<p class="p-sm">
 									This project is a Command Line Interface (CLI) File Management System 
-									(FMS) developed in <mark>C# and the .NET framework</mark>. It provides 
+									(FMS) developed in C# and the .NET framework. It provides 
 									essential file and directory operations, including directory viewing, 
 									file and directory copying, and directory navigation. The system utilizes 
-									the power of <mark>reflection to dynamically call methods</mark> from different 
+									the power of reflection to dynamically call methods from different 
 									class files. based on specified modifiers (e.g., view all files, view directories).
 								</p>
 							</div>
@@ -119,6 +131,20 @@
 									modifier to specify the exact directory I want to change to. You'll notice there is
 									a ".." in the directory. That is to specify the current/working directory. It includes
 									a backslash so no added backslash is neccessary just the name of the folder.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									The architecture of this project consists of a main file that serves as the 
+									project's entry point. Within this main file, you'll find a text parser and sanitizer responsible 
+									for dissecting user input to identify commands, modifiers, and input variables.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									To execute commands and perform actions, the program utilizes .NET's reflection 
+									capabilities to interact with other files. For example, it can access the view 
+									directory file and invoke specific methods within it based on user input.
 								</p>
 							</div>
 						</div>
@@ -165,6 +191,7 @@
 				<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
 				<a class="navlink" href="#">Resume</a>
 				<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
+			</footer>
 		</div>
 	</body>
 	<script src="https://kit.fontawesome.com/1f310bb7f4.js" crossorigin="anonymous"></script>
