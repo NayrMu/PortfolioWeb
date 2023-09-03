@@ -56,8 +56,7 @@ body {
 a {
   text-decoration: none;
 }
-.motion-btn-down:hover,
-.motion-btn-up:hover {
+.motion-btn-down:hover {
   box-shadow: 0 0.5em 0.45em -0.5em var(--color-primary);
 }
 :root {
@@ -96,10 +95,10 @@ a {
   	font-size: 1.6vh;
   }
   .p-sm {
-  	font-size: 1.3vh;
+  	font-size: 1.4vh;
   }
   .motion-btn-down i,
-  .motion-btn-up i {
+   i {
     font-size: 200%;
   }
   i {
@@ -136,13 +135,13 @@ a {
   	font-size: 2vw;
   }
   .p-lg {
-  	font-size: 1.6vw;
+  	font-size: 1.4vw;
   }
   .p-sm {
-  	font-size: 1.3vw;
+  	font-size: 1.1vw;
   }
   .motion-btn-down i,
-  .motion-btn-up i {
+   i {
     font-size: 200%;
   }
   i {
@@ -164,7 +163,10 @@ body {
   flex-grow: 1;
   border-width: 4px;
   border-style: solid;
-  border-image: linear-gradient(to bottom, var(--color-primary) 10%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, var(--color-primary) 90%) 3;
+  border-image: linear-gradient(to bottom, 
+  	var(--color-primary) 10%, 
+  	rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, 
+  	var(--color-primary) 90%) 3;
   flex-direction: column;
 }
 .footer,
@@ -206,7 +208,6 @@ body {
 .row-main {
   min-width: 80%;
   align-items: center;
-  flex-grow: 2;
   flex-direction: row;
   margin: 0.5em 5%;
 }
@@ -251,8 +252,7 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
-.motion-btn-down,
-.motion-btn-up {
+.motion-btn-down {
   display: flex;
   background: 0 0;
   height: 100%;
@@ -290,7 +290,7 @@ mark {
   padding-left: 0.5em;
   margin: 0;
 }
-.motion-btn-up {
+ {
   padding-top: 1em;
   flex-direction: column;
   justify-content: center;
@@ -298,10 +298,6 @@ mark {
   border-radius: 0.65em;
   border: none;
   width: 50%;
-}
-.motion-btn-up:hover {
-  justify-content: start;
-  cursor: pointer;
 }
 .motion-btn-down {
   padding-bottom: 1em;
@@ -333,423 +329,3 @@ mark {
 .row i {
   padding-left: 0.3em;
 }
-/* @media only screen and (max-width: 599px) and (orientation: landscape) {
-  .title {
-    font-size: 40px;
-  }
-  .sub-title {
-    font-size: 18px;
-  }
-  .navlink {
-    font-size: 12px;
-  }
-  .p-lg {
-    font-size: 13px;
-  }
-  .p-sm {
-    font-size: 10px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 110%;
-  }
-  i {
-    font-size: 25px;
-  }
-}
-@media only screen and (min-width: 600px) and (orientation: landscape) {
-  .title {
-    font-size: 52px;
-  }
-  .sub-title {
-    font-size: 24px;
-  }
-  .navlink {
-    font-size: 15px;
-  }
-  .p-lg {
-    font-size: 14px;
-  }
-  .p-sm {
-    font-size: 12px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 130%;
-  }
-  i {
-    font-size: 27px;
-  }
-}
-@media only screen and (min-width: 800px) and (orientation: landscape) {
-  .title {
-    font-size: 64px;
-  }
-  .sub-title {
-    font-size: 29px;
-  }
-  .navlink {
-    font-size: 17px;
-  }
-  .p-lg,
-  .p-sm {
-    font-size: 15px;
-  }
-  .tech-text {
-    font-size: 20px;
-  }
-  i {
-    font-size: 32px;
-  }
-}
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-  .title {
-    font-size: 76px;
-  }
-  .sub-title {
-    font-size: 35px;
-  }
-  .navlink {
-    font-size: 19px;
-  }
-  .p-lg {
-    font-size: 20px;
-  }
-  .p-sm {
-    font-size: 17px;
-  }
-  .tech-text {
-    font-size: 22px;
-  }
-  i {
-    font-size: 38px;
-  }
-}
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
-  .title {
-    font-size: 88px;
-  }
-  .sub-title {
-    font-size: 40px;
-  }
-  .navlink {
-    font-size: 21px;
-  }
-  .p-lg {
-    font-size: 22px;
-  }
-  .p-sm {
-    font-size: 19px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 150%;
-  }
-  .tech-text {
-    font-size: 35px;
-  }
-  i {
-    font-size: 45px;
-  }
-}
-@media only screen and (min-width: 1400px) and (orientation: landscape) {
-  .title {
-    font-size: 100px;
-  }
-  .sub-title {
-    font-size: 46px;
-  }
-  .navlink {
-    font-size: 22px;
-  }
-  .p-lg {
-    font-size: 24px;
-  }
-  .p-sm {
-    font-size: 20px;
-  }
-  .tech-text {
-    font-size: 40px;
-  }
-  i {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 1600px) and (orientation: landscape) {
-  .title {
-    font-size: 112px;
-  }
-  .sub-title {
-    font-size: 51px;
-  }
-  .navlink {
-    font-size: 24px;
-  }
-  .p-lg {
-    font-size: 25px;
-  }
-  .p-sm {
-    font-size: 22px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 170%;
-  }
-  .tech-text {
-    font-size: 45px;
-  }
-  i {
-    font-size: 55px;
-  }
-}
-@media only screen and (min-width: 1900px) and (orientation: landscape) {
-  .title {
-    font-size: 130px;
-  }
-  .sub-title,
-  i {
-    font-size: 60px;
-  }
-  .navlink {
-    font-size: 25px;
-  }
-  .p-lg {
-    font-size: 27px;
-  }
-  .p-sm {
-    font-size: 23px;
-  }
-  .tech-text {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 2400px) and (orientation: landscape) {
-  .title {
-    font-size: 150px;
-  }
-  .sub-title {
-    font-size: 80px;
-  }
-  .navlink {
-    font-size: 27px;
-  }
-  .p-lg {
-    font-size: 29px;
-  }
-  .p-sm {
-    font-size: 25px;
-  }
-  i {
-    font-size: 70px;
-  }
-}
-@media only screen and (max-width: 599px) and (orientation: portrait) {
-  .title {
-    font-size: 40px;
-  }
-  .sub-title {
-    font-size: 18px;
-  }
-  .navlink {
-    font-size: 12px;
-  }
-  .p-lg {
-    font-size: 13px;
-  }
-  .p-sm {
-    font-size: 10px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 110%;
-  }
-  i {
-    font-size: 25px;
-  }
-}
-@media only screen and (min-width: 600px) and (orientation: portrait) {
-  .title {
-    font-size: 52px;
-  }
-  .sub-title {
-    font-size: 24px;
-  }
-  .navlink {
-    font-size: 15px;
-  }
-  .p-lg {
-    font-size: 14px;
-  }
-  .p-sm {
-    font-size: 12px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 130%;
-  }
-  i {
-    font-size: 27px;
-  }
-}
-@media only screen and (min-width: 800px) and (orientation: portrait) {
-  .title {
-    font-size: 64px;
-  }
-  .sub-title {
-    font-size: 29px;
-  }
-  .navlink {
-    font-size: 17px;
-  }
-  .p-lg,
-  .p-sm {
-    font-size: 15px;
-  }
-  .tech-text {
-    font-size: 20px;
-  }
-  i {
-    font-size: 32px;
-  }
-}
-@media only screen and (min-width: 1000px) and (orientation: portrait) {
-  .title {
-    font-size: 76px;
-  }
-  .sub-title {
-    font-size: 35px;
-  }
-  .navlink {
-    font-size: 19px;
-  }
-  .p-lg {
-    font-size: 20px;
-  }
-  .p-sm {
-    font-size: 17px;
-  }
-  .tech-text {
-    font-size: 22px;
-  }
-  i {
-    font-size: 38px;
-  }
-}
-@media only screen and (min-width: 1200px) and (orientation: portrait) {
-  .title {
-    font-size: 88px;
-  }
-  .sub-title {
-    font-size: 40px;
-  }
-  .navlink {
-    font-size: 21px;
-  }
-  .p-lg {
-    font-size: 22px;
-  }
-  .p-sm {
-    font-size: 19px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 150%;
-  }
-  .tech-text {
-    font-size: 35px;
-  }
-  i {
-    font-size: 45px;
-  }
-}
-@media only screen and (min-width: 1400px) and (orientation: portrait) {
-  .title {
-    font-size: 100px;
-  }
-  .sub-title {
-    font-size: 46px;
-  }
-  .navlink {
-    font-size: 22px;
-  }
-  .p-lg {
-    font-size: 24px;
-  }
-  .p-sm {
-    font-size: 20px;
-  }
-  .tech-text {
-    font-size: 40px;
-  }
-  i {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 1600px) and (orientation: portrait) {
-  .title {
-    font-size: 112px;
-  }
-  .sub-title {
-    font-size: 51px;
-  }
-  .navlink {
-    font-size: 24px;
-  }
-  .p-lg {
-    font-size: 25px;
-  }
-  .p-sm {
-    font-size: 22px;
-  }
-  .motion-btn-down i,
-  .motion-btn-up i {
-    font-size: 170%;
-  }
-  .tech-text {
-    font-size: 45px;
-  }
-  i {
-    font-size: 55px;
-  }
-}
-@media only screen and (min-width: 1900px) and (orientation: portrait) {
-  .title {
-    font-size: 130px;
-  }
-  .sub-title,
-  i {
-    font-size: 60px;
-  }
-  .navlink {
-    font-size: 25px;
-  }
-  .p-lg {
-    font-size: 27px;
-  }
-  .p-sm {
-    font-size: 23px;
-  }
-  .tech-text {
-    font-size: 50px;
-  }
-}
-@media only screen and (min-width: 2400px) and (orientation: portrait) {
-  .title {
-    font-size: 150px;
-  }
-  .sub-title {
-    font-size: 80px;
-  }
-  .navlink {
-    font-size: 27px;
-  }
-  .p-lg {
-    font-size: 29px;
-  }
-  .p-sm {
-    font-size: 25px;
-  }
-  i {
-    font-size: 70px;
-  }
-} */
