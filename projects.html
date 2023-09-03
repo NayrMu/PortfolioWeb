@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">		
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="mainminified.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="text/javascript">
 			const r = document.querySelector(":root");
@@ -102,10 +102,6 @@
 						<!-- Documentation -->
 						<div class="proj-content" style="min-height: 100%;">
 
-							<!-- Up Button -->
-							<div class="row"  style="justify-content: center; height: 10%;">
-								<button class="motion-btn-up"><i class="fa-solid fa-chevron-up"></i></button>
-							</div>
 							<div class="row">
 								<p class="p-sm">
 									This project is a Command Line Interface (CLI) File Management System 
@@ -133,12 +129,13 @@
 									a backslash so no added backslash is neccessary just the name of the folder.
 								</p>
 							</div>
-							<div class="row">
+							<div class="row-main">
 								<p class="p-sm sm-d-none">
 									The architecture of this project consists of a main file that serves as the 
 									project's entry point. Within this main file, you'll find a text parser and sanitizer responsible 
 									for dissecting user input to identify commands, modifiers, and input variables.
 								</p>
+								<img src="CS-FMS-cap2.PNG" class="img-sm sm-d-none">
 							</div>
 							<div class="row">
 								<p class="p-sm sm-d-none">
@@ -154,16 +151,16 @@
 					<div class="proj-page-col">
 						<div class="proj-content">
 							<div class="row" style="justify-content: center;">
-								<a target="blank" href="https://github.com/NayrMu/BnBWebRepo"class="navlink"><span class="sub-title">Baking Website</span></a>
+								<a target="blank" href="https://nayrmu.github.io/BnBWebRepo/"class="navlink"><span class="sub-title">Baking Website</span></a>
 							</div>
 							<div class="row" style="justify-content: center;">
 								<i class="fa-brands fa-html5"></i><i class="fa-brands fa-bootstrap"></i>
 							</div>
-							<div class="row" style="text-align: center; align-items: center; flex-grow: 2;">
+							<div class="row-main">
 								<p class="p-lg sm-d-none">This project was made for a client. She is a full-time student working 
 									full-time with a side business a baking. Her business has shot up enough that she needed a basic 
 									website to show off what products she makes, pricing, and where to contact her. I used html for the 
-									structure and Bootstrap to cleanly organize and style the webpages.
+									structure and Bootstrap to cleanly organize and style the webpages. You can find the code <a href="https://github.com/NayrMu/BnBWebRepo" target="blank" class="inline-link">here</a>.
 								</p>
 								<p class="p-lg lg-d-none">
 									I've developed a CLI File Management System in C# that simplifies file and directory operations from the 
@@ -171,18 +168,234 @@
 									my C# programming skills and commitment to user-friendly software solutions.
 								</p>
 							</div>
+						</div>
+					</div>
+					<!-- Third Project -->
+					<div class="proj-page-col">
+
+						<!-- Debriefing -->
+						<div class="proj-content">
+
+							<!-- Title -->
+							<div class="row" style="justify-content: center;">
+								<a target="blank" href="https://github.com/NayrMu/CalculatorApp"class="navlink"><span class="sub-title">Calculator App</span></a>
+							</div>
+
+							<!-- Techonologies -->
+							<div class="row" style="justify-content: center;">
+								<p class="tech-text" style="text-align: center;">C#</p><p class="tech-text" style="text-align: center;">.NET</p><i class="fa-brands fa-wpforms"></i>
+							</div>
+
+							<!-- Explaination -->
+							<div class="row-main" style="text-align: center;">
+								<p class="p-lg sm-d-none">This is a general purpose calculator application for windows. It uses not only C# 
+									and the .NET framework but also Windows Presentation Foundation for the GUI. It has all of your typical 
+									operations (addition, subtraction, etc) as well as some more advanced ones like square root. It also has 
+									variable setting and keeping to aid in more complicated calculations. To top it all of it also has the 
+									three different options for styling.
+								</p>
+
+								<!-- Small Screen Explaination -->
+								<p class="p-lg lg-d-none">
+									I've developed a CLI File Management System in C# that simplifies file and 
+									directory operations from the command line. Users can create, delete, and 
+									navigate through directories effortlessly. This project showcases my C# 
+									programming skills and commitment to user-friendly software solutions.
+								</p>
+							</div>
+
 							<!-- Down Button -->
 							<div class="row" style="justify-content: center; height: 10%;">
 								<button class="motion-btn-down"><i class="fa-solid fa-chevron-down"></i></button>
 							</div>
 						</div>
+
 						<!-- Documentation -->
+						<div class="proj-content" style="min-height: 100%;">
+							<div class="row">
+								<img src="Calc-Light-cap.PNG" class="img-sm sm-d-none">
+							</div>
+							<div class="row">
+								<img src="Calc-Old-cap.PNG" class="img-sm sm-d-none">
+							</div>
+							<div class="row">
+								<img src="Calc-Dark-cap.PNG" class="img-sm sm-d-none">
+							</div>
+							<div class="row-main">
+								<p class="p-sm sm-d-none">
+									The provided images are of the different styles offered for the app.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									The "6540" at the top is the last calculated number, it can be called on by 
+									pressing the "hist" button, or you can press "set" and then the variable you 
+									want to use to store that number for later use.
+								</p>
+							</div>
+							<div class="row-main">
+								<p class="p-sm sm-d-none">
+									The architecture of this application has a main xaml and cs files since it is a WPF app. To reduce redundancy 
+									I put as many of the xaml buttons under the same funciontality with abstraction. However, as you can see with in this
+									image some functionality couldn't be abstracted and needed its own attention.
+								</p>
+								<img src="Calc-Code-cap1.PNG" class="img-sm sm-d-none">
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									The architecture follows the Command Design Pattern. It handles user input at the GUI level to extract what 
+									"commands" the user is trying to send to the program. It then delegates all the actual processing and functionality
+									to seperate class files and methods elsewhere in the program. This is a form of abstraction to keep the program
+									simple, modular and robust. You can find out more about this application 
+									<a href="https://github.com/NayrMu/CalculatorApp" target="blank" class="inline-link">here</a>.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- Fourth Project -->
+					<div class="proj-page-col">
+
+						<!-- Debriefing -->
 						<div class="proj-content">
 
-							<!-- Up Button -->
-							<div class="row"  style="justify-content: center; height: 10%;">
-								<button class="motion-btn-up"><i class="fa-solid fa-chevron-up"></i></button>
+							<!-- Title -->
+							<div class="row" style="justify-content: center;">
+								<a target="blank" href="https://github.com/NayrMu/ColorPalleteWeb/deployments"class="navlink"><span class="sub-title">Color Palette Generator</span></a>
 							</div>
+
+							<!-- Techonologies -->
+							<div class="row" style="justify-content: center;">
+								<i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i><i class="fa-brands fa-square-js"></i>
+							</div>
+
+							<!-- Explaination -->
+							<div class="row-main" style="text-align: center;">
+								<p class="p-lg sm-d-none">This webpage was my first learning project dealing with all three web-development 
+									techonologies (HTML, CSS, and JavaScript). Something I wanted for myself was a tool that could generate 
+									new color ways for me so I could have random colors placed next to each other to see how they would look for 
+									projects down the road. It also has functionality for choosing color themes based on color theory principles
+									like complementary.
+								</p>
+
+								<!-- Small Screen Explaination -->
+								<p class="p-lg lg-d-none">
+									I've developed a CLI File Management System in C# that simplifies file and 
+									directory operations from the command line. Users can create, delete, and 
+									navigate through directories effortlessly. This project showcases my C# 
+									programming skills and commitment to user-friendly software solutions.
+								</p>
+							</div>
+
+							<!-- Down Button -->
+							<div class="row" style="justify-content: center; height: 10%;">
+								<button class="motion-btn-down"><i class="fa-solid fa-chevron-down"></i></button>
+							</div>
+						</div>
+
+						<!-- Documentation -->
+						<div class="proj-content" style="min-height: 100%;">
+
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									The program utilizes a DOM feature called template to create multiple color divs dynamically in JavaScript. 
+									This way I can scale up to as many different colors as I see fit, and I can add them with just the click of a button.
+									It also allows for every color div to fall back on the same variables for color randomization no matter how many times
+									it gets deleted or added.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									In order to restrict generated colors based on color themes the colors need to be able to be put on a color wheel. The issue
+									is that most people want hex values because they're easier to type and easier to read. Hex value colors are values of
+									red green and blue, but the color wheel is based on values of red blue and yellow so there's no direct way of putting 
+									hex colors on the color wheel.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									Luckily for me people out there have already figured out algorithms for converting rgb colors to HSL (Hue, Saturation, and Lightness)
+									values. So all i need to do is apply that algorithm in javascript to place my colors on a color wheel. Then I can apply color theory 
+									to provide whatever color harmonies the user might want. Restricting the color is just a matter of selecting a range on the color wheel
+									based on the provided first color.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm">
+									You can find my code and the applicaiton of that algorithm <a href="https://github.com/NayrMu/ColorPalleteWeb" target="blank" class="inline-link">here</a>.
+								</p>
+						</div>
+					</div>
+					</div>
+					<!-- Fifth Project -->
+					<div class="proj-page-col">
+
+						<!-- Debriefing -->
+						<div class="proj-content">
+
+							<!-- Title -->
+							<div class="row" style="justify-content: center;">
+								<a target="blank" href="https://github.com/NayrMu/ColorPalleteWeb/deployments"class="navlink"><span class="sub-title">Rocket Fuel Calculator</span></a>
+							</div>
+
+							<!-- Techonologies -->
+							<div class="row" style="justify-content: center;">
+								<i class="fa-brands fa-python"></i>
+							</div>
+
+							<!-- Explaination -->
+							<div class="row-main" style="text-align: center;">
+								<p class="p-lg sm-d-none">The inpiration for this program came directly out of need. There is a rocket simulator game called
+									Kerbal Space Program. The main mechanic of the game is designing a rocket based on pre-built parts to launch into space. 
+									The aspect that I find most difficult about this is planning how much fuel I need for a given destination. So I made a program in
+									 python that can iteratively calculate how many fuel tanks I'll need for any given journey.
+								</p>
+
+								<!-- Small Screen Explaination -->
+								<p class="p-lg lg-d-none">
+									I've developed a CLI File Management System in C# that simplifies file and 
+									directory operations from the command line. Users can create, delete, and 
+									navigate through directories effortlessly. This project showcases my C# 
+									programming skills and commitment to user-friendly software solutions.
+								</p>
+							</div>
+
+							<!-- Down Button -->
+							<div class="row" style="justify-content: center; height: 10%;">
+								<button class="motion-btn-down"><i class="fa-solid fa-chevron-down"></i></button>
+							</div>
+						</div>
+
+						<!-- Documentation -->
+						<div class="proj-content" style="min-height: 100%;">
+
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									The program utilizes a DOM feature called template to create multiple color divs dynamically in JavaScript. 
+									This way I can scale up to as many different colors as I see fit, and I can add them with just the click of a button.
+									It also allows for every color div to fall back on the same variables for color randomization no matter how many times
+									it gets deleted or added.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									In order to restrict generated colors based on color themes the colors need to be able to be put on a color wheel. The issue
+									is that most people want hex values because they're easier to type and easier to read. Hex value colors are values of
+									red green and blue, but the color wheel is based on values of red blue and yellow so there's no direct way of putting 
+									hex colors on the color wheel.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm sm-d-none">
+									Luckily for me people out there have already figured out algorithms for converting rgb colors to HSL (Hue, Saturation, and Lightness)
+									values. So all i need to do is apply that algorithm in javascript to place my colors on a color wheel. Then I can apply color theory 
+									to provide whatever color harmonies the user might want. Restricting the color is just a matter of selecting a range on the color wheel
+									based on the provided first color.
+								</p>
+							</div>
+							<div class="row">
+								<p class="p-sm">
+									You can find my code and the applicaiton of that algorithm <a href="https://github.com/NayrMu/ColorPalleteWeb" target="blank" class="inline-link">here</a>.
+								</p>
 						</div>
 					</div>
 				</div>
