@@ -89,12 +89,29 @@
 									is essentially a way to universally format your data for storage. Sounds pretty simple right?
 									It's used a lot in game development for storing player data and world game data so you pick 
 									up right where you left off, but it has use in other places as well, pretty much anytime data 
-									needs to be saved and transported for reuse somewhere else, data serialization is the way to go.						
-								</p>
-								<p>
+									needs to be saved and transported for reuse somewhere else, data serialization is the way to go.<br><br>
 									This may sound fairly straight-forward, and to some maybe it is, but it can actually become quite complex
 									depending on the data-types and structures you're trying to store. To make things easier on myself I'm only
-									going to worry about storing a few basic datatypes; string and int, from user input.
+									going to worry about storing a few basic datatypes; string and int, from user input.					
+								</p>
+							</div>
+							<div class="row" style="justify-content: center;">
+								<img src="DSDevlog1-Cap1.PNG" class="img-sm">
+							</div>
+							<div class="row-main">
+								<p class="p-sm">
+									The next step is to figure out what it realy means to "serialize" data. I've decided to look to 
+									<a href="https://isocpp.org/wiki/faq/serialization" target="blank">this</a> 
+									web article for some guidance. I can not find the name of the author, so for the time being I will refer to them as the Grand Wizard.
+									According to the Grand Wizard I have two options in for serilizing data; binary and human readable storage. Even though for the purposes of this initial project
+									I will encounter no issues using human readable data storgae and it would be easier to learn, too, I have decided to go 
+									with binary to think ahead for scalability. Plus, the other route feels like a bit of a cop out.<br><br>
+									It was around this point that I realized I might be in a little over my head, as after reading the bit about serializing simple data types, I'm still 
+									not sure what it really means or looks like to serialize simple data types... onto the next article.<br><br>
+									Now I'm working with <a href="https://dotnettutorials.net/lesson/file-handling-in-cpp/">this</a> article for file handling and 
+									<a href="https://dotnettutorials.net/lesson/serialization-in-cpp/">this</a> subsequent article for data seriliaztion.
+									Again I can not find the author for these articles so I will be referring to them as Grand Wizard B. And I will be learning the basics of file
+									handling and the iostream in C++.
 								</p>
 							</div>
 						</div>
