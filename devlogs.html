@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">		
+		<link rel="stylesheet" type="text/css" href="mainminified.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript">
+			const r = document.querySelector(":root");
+			if (r !== null) {
+				console.log("Yosh")
+			} else {console.log("aouhhh")}
+			let darkModePreference = localStorage.getItem('darkMode');
+			if (darkModePreference === "disabled" | darkModePreference === null) {
+				
+					r.style.setProperty("--color-bg", "#f1f1ef");
+					r.style.setProperty("--color-primary", "#3b3b3b");
+					r.style.setProperty("--color-secondary", "#8b8b8b");
+
+
+				} else {
+					r.style.setProperty("--color-bg", "#3b3b3b");
+					r.style.setProperty("--color-primary", "#dadad9");
+					r.style.setProperty("--color-secondary", "#bbbbbb");
+
+				}
+		</script>
+	</head>
+	<body>
+		<svg id="fader"></svg>
+		<script type="text/javascript">
+			function fadeInPage() {
+				if (!window.AnimationEvent) { return; }
+
+				var fader = document.getElementById("fader");
+				fader.classList.add("fade-out");
+			}
+
+			fadeInPage();
+		</script>
+		<div class="ext-row-top lg-d-none">
+			<button class="color-mode-btn"><i class="fa-regular fa-moon" style="font-size: 3vh"></i></button>
+		</div>
+		<div class="ext-row-left sm-d-none">
+			<button class="color-mode-btn"><i class="fa-regular fa-moon" style="font-size: 3vh"></i></button>
+		</div>
+		<div class="frame">
+			<!-- Navbar -->
+			<nav class="navbar">
+				<a class="navlink sm-d-none" href="index.html">Home</a>
+				<a class="navlink sm-d-none" href="projects.html">Projects</a>
+				<a class="navlink sm-d-none" href="devlogs.html">Devlogs</a>
+				<a class="navlink sm-d-none" href="aboutme.html">About Me</a>
+				<a class="navlink lg-d-none" href="index.html"><i class="fa-solid fa-house"></i></a>
+				<a class="navlink lg-d-none" href="projects.html"><i class="fa-solid fa-code"></i></a>
+				<a class="navlink lg-d-none" href="devlogs.html"><i class="fa-solid fa-clipboard"></i></a>
+				<a class="navlink lg-d-none" href="aboutme.html"><i class="fa-solid fa-user"></i></a>
+			</nav>
+
+			<!-- Content -->
+			<section class="content">
+				<div class="proj-page-row">
+
+					<!-- First Project -->
+					<div class="proj-page-col">
+
+						<!-- Debriefing -->
+						<div class="proj-content">
+
+							<!-- Title -->
+							<div class="row-main" style="justify-content: center; flex-grow: 1;">
+								<a target="blank" href="https://github.com/NayrMu/CSFileManager"class="navlink"><span class="sub-title">Data Serilization in C++</span></a>
+							</div>
+							<!-- Down Button -->
+							<div class="row" style="justify-content: center; height: 10%;">
+								<button class="motion-btn-down"><i class="fa-solid fa-chevron-down"></i></button>
+							</div>
+						</div>
+
+						<!-- Documentation -->
+						<div class="proj-content" style="min-height: 100%;">
+
+							<div class="row" style="justify-content: center;">
+								<span class="sub-title" >Devlog 1: 07/15/2023</span>
+							</div>
+							<div class="row-main">
+								<p class="p-sm ">
+									I've decided that the first project I want to work on after learning c++ 
+									is learning to serialize data for persistant storage. For those that don't know, data serialization 
+									is essentially a way to universally format your data for storage. Sounds pretty simple right?
+									It's used a lot in game development for storing player data and world game data so you pick 
+									up right where you left off, but it has use in other places as well, pretty much anytime data 
+									needs to be saved and transported for reuse somewhere else, data serialization is the way to go.						
+								</p>
+								<p>
+									This may sound fairly straight-forward, and to some maybe it is, but it can actually become quite complex
+									depending on the data-types and structures you're trying to store. To make things easier on myself I'm only
+									going to worry about storing a few basic datatypes; string and int, from user input.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="footer">
+				<a class="navlink" target="blank" href="https://www.linkedin.com/in/ryan-muncy"><i class="fa-brands fa-linkedin"></i></a>
+				<a class="navlink" href="#">Resume</a>
+				<a class="navlink" target="blank" href="https://github.com/NayrMu"><i class="fa-brands fa-github"></i></a>
+			</footer>
+		</div>
+	</body>
+	<script src="https://kit.fontawesome.com/1f310bb7f4.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="javascriptminified.js"></script>
+</html>
